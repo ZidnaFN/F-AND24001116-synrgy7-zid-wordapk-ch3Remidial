@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".fragment.DetailFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -31,10 +31,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                tools:ignore="SpeakableTextPresentCheck">
 
                 <ImageView
                     android:id="@+id/back_button"
@@ -42,12 +43,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_weight="1"
+                    android:contentDescription="TODO"
                     android:foregroundGravity="left"
                     android:src="@android:drawable/ic_input_delete"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-            </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/header_text"
@@ -60,6 +62,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-    </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
